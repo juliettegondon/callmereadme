@@ -55,6 +55,7 @@ const questions = [
 
 // function to write README file
 //generatemarkdown function
+ //return the data using the writefilesync function, fs.write
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(error){
         if (error){
