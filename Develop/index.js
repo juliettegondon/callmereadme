@@ -29,7 +29,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'which license will you be using?',
-        choices: ['apache2.0','MIT', 'BSD']
+        choices: ['Apache', 'GNU', 'MIT']
     },
     {
         type: 'input',
@@ -55,7 +55,7 @@ const questions = [
 
 // function to write README file
 //generatemarkdown function
- //return the data using the writefilesync function, fs.write
+ //return the data using the writefilesync function
 function writeToFile(fileName, answers) {
    return fs.writeFileSync(fileName, answers);
     

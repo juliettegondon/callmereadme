@@ -1,6 +1,14 @@
 // function to generate markdown for README
 // look into markdown cheatsheet to figure out how to write markdown
 function generateMarkdown(answers) {
+  let badges = "https://img.shields.io/badge/license-MIT-green";
+  if (answers.license == "Apache") {
+    badges = "https://img.shields.io/badge/license-Apache-blue";
+  } else if (answers.license == "GNU") {
+    badges = "https://img.shields.io/badge/license-GNU-HSL(20%C2%B0%2C%20100%25%2C%2050%25)";
+  } else {
+    badges = "https://img.shields.io/badge/license-MIT-green"
+  };
   return `
   # Title 
   # ${answers.title}
@@ -9,16 +17,20 @@ function generateMarkdown(answers) {
   ${answers.description}
 
   # Table of Contents
-  * ${answers.installation} 
   * ${answers.description}
+  * ${answers.installation} 
+  * ${answers.contributing} 
+  * ${answers.tests} 
   * ${answers.usage} 
-  * ${answers.license} 
+  * ${answers.questions} 
 
   ## Installation:
   ${answers.installation} 
 
   ## License:
-  ${answers.license} 
+  ${answers.license}
+  ![badge](${badges}) 
+  
 
   ## Contributing:
   ${answers.contributing}
