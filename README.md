@@ -32,4 +32,6 @@
 If you have any questions, you can contact the creator of this repo here: [juliettegondon@gmail.com](mailto:juliettegondon@gmail.com)
 GitHub: https://github.com/juliettegondon
 
+<img width="1440" alt="Screen Shot 2020-10-06 at 2 12 37 PM" src="https://user-images.githubusercontent.com/68354391/95249487-c130b780-07e6-11eb-8423-f70ccfa368a9.png">
+<img width="1440" alt="Screen Shot 2020-10-06 at 2 12 40 PM" src="https://user-images.githubusercontent.com/68354391/95249492-c261e480-07e6-11eb-9357-43c62288018c.png">
 
