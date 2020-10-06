@@ -10,19 +10,17 @@ function generateMarkdown(answers) {
     badges = "https://img.shields.io/badge/license-MIT-green"
   };
   return `
-  # Title 
-  # ${answers.title}
+  # Title ${answers.title}
 
   ## Description
   ${answers.description}
 
   # Table of Contents
-  * ${answers.description}
-  * ${answers.installation} 
-  * ${answers.contributing} 
-  * ${answers.tests} 
-  * ${answers.usage} 
-  * ${answers.questions} 
+  *  Installation 
+  *  Contributing 
+  *  Tests 
+  *  Usage 
+  *  Questions 
 
   ## Installation:
   ${answers.installation} 
@@ -36,16 +34,14 @@ function generateMarkdown(answers) {
   ${answers.contributing}
 
   ## Tests:
-  ${answers.test}
+  ${answers.tests}
 
-  ## Usage Info:
+  ## Usage:
   ${answers.usage} 
-  ${answers.license} 
-
   ## Questions: 
 
 If you have any questions, you can contact the creator of this repo here: [${answers.email}](mailto:${answers.email})
-GitHub: (https://github.com/${answers.github}
+GitHub: https://github.com/${answers.github}
 
 
 
