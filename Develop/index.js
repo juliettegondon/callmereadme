@@ -29,7 +29,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'which license will you be using?',
-        choices: ['apache','apache2.0', 'boost', 'BSD', 'MIT']
+        choices: ['apache2.0','MIT', 'BSD']
     },
     {
         type: 'input',
@@ -43,7 +43,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'github username',
+        name: 'github',
         message: 'What is your github username',
     },
     {
@@ -56,12 +56,8 @@ const questions = [
 // function to write README file
 //generatemarkdown function
  //return the data using the writefilesync function, fs.write
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, function(error){
-        if (error){
-            throw error
-        }
-    })
+function writeToFile(fileName, answers) {
+   return fs.writeFileSync(fileName, answers);
     
   
 }
@@ -73,6 +69,7 @@ inquirer
   .prompt(questions)
   .then(answers => {
     console.log('ANSWERS--->',answers);
+    writeToFile("README.md",generateMarkdown(answers));
 })
   };
 
